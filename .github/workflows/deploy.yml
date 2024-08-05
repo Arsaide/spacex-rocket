@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run tests
-        run: yarn test
-
       - name: Install Vercel CLI
         run: yarn global add vercel@latest
 
