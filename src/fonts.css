@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-Black.ttf');
+    src: local('Gilroy Black'), local('Rubik-Black'),
+    url('../public/fonts/Rubik-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-ExtraBold.ttf');
+    src: local('Gilroy ExtraBold'), local('Rubik-ExtraBold'),
+    url('../public/fonts/Rubik-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-Light.ttf');
+    src: local('Gilroy Light'), local('Rubik-Light'),
+    url('../public/fonts/Rubik-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-Medium.ttf');
+    src: local('Gilroy Medium'), local('Rubik-Medium'),
+    url('../public/fonts/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-Regular.ttf');
+    src: local('Gilroy Regular'), local('Rubik-Regular'),
+    url('../public/fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-SemiBold.ttf');
+    src: local('Gilroy SemiBold'), local('Rubik-SemiBold'),
+    url('../public/fonts/Rubik-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../public/fonts/Rubik-Bold.ttf');
+    src: local('Gilroy Bold'), local('Rubik-Bold'),
+    url('../public/fonts/Rubik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
