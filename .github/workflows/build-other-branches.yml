@@ -1,0 +1,60 @@
+name: Build Branches
+
+on:
+  push:
+    branches:
+      - '*'
+    branches-ignore:
+      - main
+  pull_request:
+    branches:
+      - '*'
+    branches-ignore:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/yarn
+            ~/.yarn
+            !~/.cache/yarn/v6
+            ~/.npm
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run ESLint
+        run: yarn lint
+
+      - name: Run checking for extra code
+        run: |
+          if grep -r 'console.log' ./src; then
+            echo "Error: console.log statements found" >&2
+            exit 1
+          fi
+          if yarn tsc --noEmit | grep 'error TS6133'; then
+            echo "Error: Unused variables found" >&2
+            exit 1
+          fi
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Build Project Artifacts
+        run: yarn build
