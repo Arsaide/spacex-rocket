@@ -1,5 +1,6 @@
 import styles from './WelcomeContent.module.scss';
 import '../../../../../../../../public/toy-rocket.gif';
+import RocketGif from '../../../../../../../../public/toy-rocket-mini.gif';
 
 const WelcomeContent = () => {
     return (
@@ -11,7 +12,7 @@ const WelcomeContent = () => {
             </h1>
             <div className={styles.img}>
                 <img
-                    src={'../../../../../../../../public/toy-rocket-mini.gif'}
+                    src={RocketGif}
                     alt={'Toy Rocket Gif'}
                 />
             </div>
