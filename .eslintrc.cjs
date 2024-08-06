@@ -37,6 +37,7 @@ module.exports = {
     ],
     'unused-imports/no-unused-imports': 'error',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'react/react-in-jsx-scope': 'off'
     "import/named": "off"
   },
 }
