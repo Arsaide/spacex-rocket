@@ -1,14 +1,13 @@
-import './App.css'
-import {NavLink} from "react-router-dom";
+import './App.css';
+import { NavLink } from 'react-router-dom';
 
 function App() {
-
-  return (
-    <>
-      Hello World
-        <NavLink to={'/qwe'}>NAVLINK</NavLink>
-    </>
-  )
+    return (
+        <>
+            Hello WorldHello WorldHello WorldHello World
+            <NavLink to={'/qwe'}>NAVLINK</NavLink>
+        </>
+    );
 }
 
-export default App
+export default App;
