@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.menu {
+  display: flex;
+  gap: 48px;
+}
+
+.menuItem {
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 1px solid var(--white);
+  border-radius: 100vmax;
+}
+
+.btnAnim {
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s ease-out 0s, transform .1s ease-out 0s;
+
+  a {
+    color: var(--white);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Page from '../../app/page/page.tsx';
+import RocketId from '../../app/rocket-id/RocketId.tsx';
 import Layout from '../../components/layout/Layout.tsx';
-import App from '../../app/App.tsx';
+import Main from '../../app/main/Main.tsx';
 
 const router = createBrowserRouter([
     {
@@ -10,11 +10,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <App />,
+                element: <Main />,
             },
             {
-                path: '/qwe',
-                element: <Page />,
+                path: '/rocket-id',
+                element: <RocketId />,
             },
         ],
     },
