@@ -21,6 +21,23 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Run ESLint
+        run: yarn lint
+
+      - name: Run custom code quality checks
+        run: |
+          if grep -r 'console.log' ./src; then
+            echo "Error: console.log statements found" >&2
+            exit 1
+          fi
+          if yarn tsc --noEmit | grep 'error TS6133'; then
+            echo "Error: Unused variables found" >&2
+            exit 1
+          fi
+
+      - name: Run tests
+        run: yarn test
+
       - name: Install Vercel CLI
         run: yarn global add vercel@latest
 
