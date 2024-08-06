@@ -1,0 +1,21 @@
+.content {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 100px;
+  line-height: 118%;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.img {
+  z-index: 1;
+  top: -50px;
+  right: 100px;
+  position: absolute;
+}
