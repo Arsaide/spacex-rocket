@@ -1,0 +1,19 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 33%;
+  text-align: center;
+}
+
+.value {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+}
+
+.label {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: calc(38/32 * 100%);
+  text-transform: uppercase;
+}
