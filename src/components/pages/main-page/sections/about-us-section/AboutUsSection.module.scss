@@ -1,0 +1,34 @@
+.section {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.29%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border: 1px solid var(--white-opacity-02);
+  border-radius: 40px;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
