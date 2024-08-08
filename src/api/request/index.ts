@@ -5,7 +5,7 @@ const API_URL = `https://api.spacexdata.com`;
 // const API_URL = 'http://localhost:8000'
 
 const $api = axios.create({
-    withCredentials: true,
+    // withCredentials: true,
     baseURL: API_URL,
 });
 

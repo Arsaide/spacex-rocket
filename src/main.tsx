@@ -5,8 +5,9 @@ import { RouterProvider } from 'react-router-dom';
 import router from './utils/routes/routes.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { queryClientConfig } from './utils/queryClientConfig.ts';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient(queryClientConfig);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
