@@ -55,7 +55,7 @@ const Counter:FC<CounterProps> = ({value, label, interval}) => {
 
             return () => clearInterval(timer);
         }
-    }, [isVisible, value]);
+    }, [interval, isVisible, value]);
 
     return (
         <div ref={counterRef} className={styles.counter}>
