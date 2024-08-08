@@ -1,0 +1,32 @@
+.custom-prev, .custom-next {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.disabled {
+    cursor: default;
+    opacity: .5;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-bullet {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.custom-bullet-active {
+    opacity: 1;
+    cursor: default;
+}

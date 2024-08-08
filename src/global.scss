@@ -6,7 +6,9 @@
   --white: #FFFFFF;
   --black: rgba(0, 0, 0);
   --main-theme: rgba(0, 0, 0);
-  --white-opacity: rgba(255, 255, 255, .3);
+  --white-opacity-03: rgba(255, 255, 255, .3);
+  --white-opacity-02: rgba(255, 255, 255, .1);
+  --white-opacity-01: rgba(255, 255, 255, .1);
 
   --fz-text14: 14px;
   --fz-text16: 16px;
@@ -120,7 +122,7 @@ select {
   flex: 1 1 auto;
 }
 
-[class*="container"] {
+[class*="cnt"] {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 32px;
@@ -128,7 +130,7 @@ select {
 }
 
 @media (max-width: 767.98px) {
-  [class*="container"] {
+  [class*="cnt"] {
     padding: 0 12px;
   }
 }

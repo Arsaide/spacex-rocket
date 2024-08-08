@@ -13,7 +13,7 @@ const router = createBrowserRouter([
                 element: <Main />,
             },
             {
-                path: '/rocket-id',
+                path: '/rocket',
                 element: <RocketId />,
             },
         ],
