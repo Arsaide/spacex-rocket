@@ -1,0 +1,35 @@
+.section {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 32px;
+  box-shadow: inset 0px -117px 122px -18px rgba(0,0,0,0.75);
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(24/14 * 100%);
+  max-width: 450px;
+
+}

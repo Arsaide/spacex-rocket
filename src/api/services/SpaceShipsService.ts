@@ -7,7 +7,7 @@ export default class SpaceShipsService {
         return $api.get<SpaceShipModel[]>(`/v4/rockets`);
     }
 
-    static async getOneSpaceShip(id: string): Promise<AxiosResponse<SpaceShipModel>> {
+    static async getOneSpaceShip(id: null | string): Promise<AxiosResponse<SpaceShipModel>> {
         return $api.get<SpaceShipModel>(`/v4/rockets/${id}`);
     }
 }
