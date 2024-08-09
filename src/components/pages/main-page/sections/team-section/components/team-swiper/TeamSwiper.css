@@ -1,0 +1,11 @@
+.TeamSwiper .swiper-wrapper .swiper-slide {
+    min-width: max-content;
+}
+
+.TeamSwiper {
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+}

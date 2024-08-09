@@ -14,7 +14,7 @@ interface RocketSwiperProps {
     rockets: SpaceShipModel[];
 }
 
-const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
+const RocketSwiper: FC<RocketSwiperProps> = ({ rockets }) => {
     const [navState, setNavState] = useState({
         isBeginning: true,
         isEnd: false,
@@ -31,7 +31,7 @@ const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
         <div className={styles.swiperCnt}>
             <Swiper
                 slidesPerView={1}
-                spaceBetween={30}
+                spaceBetween={20}
                 navigation={{
                     nextEl: '.custom-next',
                     prevEl: '.custom-prev',
@@ -55,7 +55,11 @@ const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
                     <SwiperSlide key={ship.id}>
                         <NavLink to={`/rocket?id=${ship.id}`} className={styles.card}>
                             <div className={styles.imgCnt}>
-                                <img className={styles.img} src={ship.flickr_images[0]} alt={ship.name} />
+                                <img
+                                    className={styles.img}
+                                    src={ship.flickr_images[0]}
+                                    alt={ship.name}
+                                />
                             </div>
                             <div className={styles.content}>
                                 <h4 className={styles.name}>{ship.name}</h4>
@@ -81,8 +85,8 @@ const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
                                     <li className={styles.item}>
                                         <div className={styles.label}>Thrust (First Stage):</div>
                                         <div className={styles.values}>
-                                            {ship.first_stage.thrust_sea_level.kN} kN
-                                            / {ship.first_stage.thrust_sea_level.lbf} lbf
+                                            {ship.first_stage.thrust_sea_level.kN} kN /{' '}
+                                            {ship.first_stage.thrust_sea_level.lbf} lbf
                                         </div>
                                     </li>
                                     <li className={styles.item}>
@@ -99,9 +103,7 @@ const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
                                     </li>
                                     <li className={styles.item}>
                                         <div className={styles.label}>First Flight:</div>
-                                        <div className={styles.values}>
-                                            {ship.first_flight}
-                                        </div>
+                                        <div className={styles.values}>{ship.first_flight}</div>
                                     </li>
                                 </ul>
                             </div>
@@ -110,15 +112,11 @@ const RocketSwiper:FC<RocketSwiperProps> = ({rockets}) => {
                 ))}
             </Swiper>
             <div className={styles.pagination}>
-                <div
-                    className={`custom-prev ${navState.isBeginning ? 'disabled' : ''}`}
-                >
+                <div className={`custom-prev ${navState.isBeginning ? 'disabled' : ''}`}>
                     <Arrow direction={'left'} size={30} />
                 </div>
                 <div className="custom-pagination"></div>
-                <div
-                    className={`custom-next ${navState.isEnd ? 'disabled' : ''}`}
-                >
+                <div className={`custom-next ${navState.isEnd ? 'disabled' : ''}`}>
                     <Arrow direction={'right'} size={30} />
                 </div>
             </div>
