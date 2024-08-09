@@ -4,7 +4,7 @@ const AboutUsSection = () => {
     return (
         <section className={styles.section}>
             <div className={'cnt'}>
-                <h3 className={styles.title}></h3>
+                <h3 className={styles.title}>About Us</h3>
                 <div className={styles.content}>
                     <div className={styles.video}>
                         <iframe
@@ -17,7 +17,7 @@ const AboutUsSection = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen
-                        ></iframe>
+                        />
                     </div>
                 </div>
             </div>

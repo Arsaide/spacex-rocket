@@ -1,0 +1,66 @@
+.team {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin: 100px 0;
+}
+
+.content {
+  max-width: 400px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(24/14 * 100%);
+}
+
+.pagination {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 126px;
+  height: 126px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: opacity .2s ease-out 0s, transform .1s ease-out 0s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    background-color: var(--white-opacity-03);
+    cursor: default;
+
+    &:hover {opacity: 1;}
+    &:active {transform: none}
+  }
+}
+
+.swiper {
+  flex: 1;
+  min-width: 0;
+}
