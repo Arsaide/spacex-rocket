@@ -1,0 +1,52 @@
+.card {
+  margin: 210px 0 100px 0;
+}
+
+.swiperContainer {
+  flex: 1;
+  max-width: 60%;
+  height: max-content;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.content {
+  display: flex;
+  border: 1px solid var(--white-opacity-02);
+  border-radius: 40px;
+  padding: 24px;
+  gap: 24px;
+}
+
+.info {
+  flex: 1 0 35%;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: calc(28/24 * 100%);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.characteristics {
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--white-opacity-01);
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(17/14 * 100%);
+}

@@ -1,0 +1,42 @@
+.RocketSwiper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--white-opacity-02);
+    border-radius: 20px;
+}
+
+.RocketSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 495px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.custom-rocket-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.custom-rocket-bullet {
+    background-color: var(--white);
+    width: 12px;
+    height: 12px;
+    border-radius: 100vmax;
+    margin: 0 5px;
+    opacity: .5;
+    transition: opacity .3s ease-out 0s;
+    cursor: pointer;
+}
+
+.custom-rocket-bulletActive {
+    opacity: 1;
+    cursor: default;
+}
