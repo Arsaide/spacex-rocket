@@ -1,5 +1,4 @@
 import styles from './WelcomeSection.module.scss';
-import WelcomeHeader from './components/welcome-header/WelcomeHeader.tsx';
 import WelcomeContent from './components/welcome-content/WelcomeContent.tsx';
 import WelcomeBottom from './components/welcome-bottom/WelcomeBottom.tsx';
 
@@ -8,7 +7,6 @@ const WelcomeSection = () => {
         <section className={styles.section} id={'main'}>
             <div className={'cnt'}>
                 <div className={styles.content}>
-                    <WelcomeHeader />
                     <WelcomeContent />
                     <WelcomeBottom />
                 </div>
