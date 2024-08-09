@@ -1,4 +1,4 @@
-import { settingMinMaxValue } from '../../src/utils/styles-func/settingMinMaxValue';
+import { settingMinMaxValue } from '../../src/utils/styles-func/settingMinMaxValue.ts';
 
 describe('settingMinMaxValue', () => {
     it('should return the correct calc value within range', () => {

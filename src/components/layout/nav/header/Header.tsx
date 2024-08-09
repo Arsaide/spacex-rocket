@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import { useEffect, useState } from 'react';
-import { settingValue } from '../../../../utils/styles-func/settingMinMaxValue.ts';
+import { settingMinMaxValue } from '../../../../utils/styles-func/settingMinMaxValue.ts';
 import NavMenu from './components/nav-menu/NavMenu.tsx';
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <header
             className={styles.header}
-            style={{ margin: `${settingValue(scrollPos, 48, 5, 300)}px 0` }}
+            style={{ margin: `${settingMinMaxValue(scrollPos, 48, 5, 300)}px 0` }}
         >
             <div className={'cnt'}>
                 <NavMenu scrollPos={scrollPos} />
