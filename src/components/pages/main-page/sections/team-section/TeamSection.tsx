@@ -3,7 +3,7 @@ import TeamSwiper from './components/team-swiper/TeamSwiper.tsx';
 
 const TeamSection = () => {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={'team'}>
             <div className={'cnt'}>
                 <div className={styles.content}>
                     <TeamSwiper />

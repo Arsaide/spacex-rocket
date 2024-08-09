@@ -5,7 +5,7 @@ import WelcomeBottom from './components/welcome-bottom/WelcomeBottom.tsx';
 
 const WelcomeSection = () => {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={'main'}>
             <div className={'cnt'}>
                 <div className={styles.content}>
                     <WelcomeHeader />
