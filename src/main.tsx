@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.scss';
 import { RouterProvider } from 'react-router-dom';
@@ -10,10 +9,8 @@ import { queryClientConfig } from './utils/queryClientConfig.ts';
 const queryClient = new QueryClient(queryClientConfig);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <RouterProvider router={router} />
-            <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
-    </React.StrictMode>,
+    <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>,
 );

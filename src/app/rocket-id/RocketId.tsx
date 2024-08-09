@@ -1,5 +1,11 @@
+import RocketIdPage from '../../components/pages/rocket-id-page/RocketIdPage.tsx';
+
 const RocketId = () => {
-    return <div>23121321321321231213</div>;
+    return (
+        <>
+            <RocketIdPage />
+        </>
+    );
 };
 
 export default RocketId;
