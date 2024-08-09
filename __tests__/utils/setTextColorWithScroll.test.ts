@@ -1,4 +1,4 @@
-import { setTextColorWithScroll, RGB } from '../../src/utils/styles-func/setTextColorWithScroll';
+import { setTextColorWithScroll, RGB } from '../../src/utils/styles-func/setTextColorWithScroll.ts';
 
 describe('setTextColorWithScroll', () => {
     it('should return the start color when scroll pos = 0', () => {

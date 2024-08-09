@@ -1,4 +1,4 @@
-import { setBackgroundRGBColor } from '../../src/utils/styles-func/setBackgroundRGBColor';
+import { setBackgroundRGBColor } from '../../src/utils/styles-func/setBackgroundRGBColor.ts';
 
 describe('setBackgroundRGBColor', () => {
     it('should return the correct rgba color with default color and opacity', () => {

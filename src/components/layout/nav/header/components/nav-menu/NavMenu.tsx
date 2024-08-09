@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { setTextColorWithScroll } from '../../../../../../utils/styles-func/setTextColorWithScroll.ts';
-import { settingValue } from '../../../../../../utils/styles-func/settingMinMaxValue.ts';
+import { settingMinMaxValue } from '../../../../../../utils/styles-func/settingMinMaxValue.ts';
 import styles from '../../Header.module.scss';
 import { setBackgroundRGBColor } from '../../../../../../utils/styles-func/setBackgroundRGBColor.ts';
 import classNames from 'classnames';
@@ -13,7 +13,7 @@ interface NavMenuProps {
 
 const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
     const linkColor = setTextColorWithScroll(scrollPos, 300);
-    const padding = `${settingValue(scrollPos, 32, 15, 600)}px 0`;
+    const padding = `${settingMinMaxValue(scrollPos, 32, 15, 600)}px 0`;
 
     return (
         <nav
