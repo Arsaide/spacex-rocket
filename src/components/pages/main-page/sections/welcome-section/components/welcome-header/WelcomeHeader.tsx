@@ -13,10 +13,10 @@ const WelcomeHeader = () => {
                     <NavLink to={'/'}>Home</NavLink>
                 </li>
                 <li className={classNames(styles.menuItem, styles.btnAnim)}>
-                    <NavLink to={'/about'}>About</NavLink>
+                    <a href={'#about'}>About</a>
                 </li>
                 <li className={classNames(styles.menuItem, styles.btnAnim)}>
-                    <NavLink to={'/qa'}>Qa</NavLink>
+                    <a href={'#team'}>Qa</a>
                 </li>
                 <li className={classNames(styles.menuItem, styles.btnAnim)}>
                     <NavLink to={'/contact-form'}>Contact form</NavLink>

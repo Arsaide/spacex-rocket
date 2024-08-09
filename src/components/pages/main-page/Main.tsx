@@ -3,6 +3,7 @@ import RocketListSection from './sections/rocket-list-section/RocketListSection.
 import CounterSection from './sections/counters-section/CounterSection.tsx';
 import AboutUsSection from './sections/about-us-section/AboutUsSection.tsx';
 import TeamSection from './sections/team-section/TeamSection.tsx';
+import GallerySection from './sections/gallery-section/GallerySection.tsx';
 
 const MainPage = () => {
     return (
@@ -12,6 +13,7 @@ const MainPage = () => {
             <CounterSection />
             <AboutUsSection />
             <TeamSection />
+            <GallerySection />
         </>
     );
 };
