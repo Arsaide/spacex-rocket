@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { setColorWithScroll } from '../../../../../../utils/styles-func/setTextColor.ts';
+import { setTextColorWithScroll } from '../../../../../../utils/styles-func/setTextColorWithScroll.ts';
 import { settingValue } from '../../../../../../utils/styles-func/settingMinMaxValue.ts';
 import styles from '../../Header.module.scss';
-import { getBackgroundRGBColor } from '../../../../../../utils/styles-func/setBackgroundRGBColor.ts';
+import { setBackgroundRGBColor } from '../../../../../../utils/styles-func/setBackgroundRGBColor.ts';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import NavItem from '../nav-item/NavItem.tsx';
@@ -12,7 +12,7 @@ interface NavMenuProps {
 }
 
 const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
-    const linkColor = setColorWithScroll(scrollPos, 300);
+    const linkColor = setTextColorWithScroll(scrollPos, 300);
     const padding = `${settingValue(scrollPos, 32, 15, 600)}px 0`;
 
     return (
@@ -20,7 +20,7 @@ const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
             className={styles.nav}
             style={{
                 padding,
-                backgroundColor: getBackgroundRGBColor(600, scrollPos, '255, 255, 255', 0.7),
+                backgroundColor: setBackgroundRGBColor(600, scrollPos, '255, 255, 255', 0.7),
             }}
         >
             <div
@@ -30,7 +30,7 @@ const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
                 <NavLink
                     to={'/'}
                     style={{
-                        color: setColorWithScroll(scrollPos, 300),
+                        color: setTextColorWithScroll(scrollPos, 300),
                     }}
                 >
                     LOGO
@@ -57,7 +57,7 @@ const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
                 <NavLink
                     to={'/contact-form'}
                     style={{
-                        color: setColorWithScroll(scrollPos, 300),
+                        color: setTextColorWithScroll(scrollPos, 300),
                     }}
                 >
                     Log In
