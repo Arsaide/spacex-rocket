@@ -1,4 +1,4 @@
-export const settingValue = (
+export const settingMinMaxValue = (
     scrollPos: number,
     maxValue: number,
     minValue: number,

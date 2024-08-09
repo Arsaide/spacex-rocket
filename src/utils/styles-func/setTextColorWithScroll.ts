@@ -1,10 +1,10 @@
-interface RGB {
+export interface RGB {
     r: number;
     g: number;
     b: number;
 }
 
-export const setColorWithScroll = (
+export const setTextColorWithScroll = (
     scrollPos: number,
     maxScroll: number,
     startColor: RGB = { r: 255, g: 255, b: 255 },
