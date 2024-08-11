@@ -1,5 +1,4 @@
 .member {
-  flex: 1 0 50%;
   border: 1px solid var(--white-opacity-02);
   border-radius: 40px;
   padding: 32px;
@@ -24,8 +23,36 @@
   }
 }
 
-.avatar {
+.imgCnt {
   width: 100%;
   height: 423px;
   margin-bottom: 12px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+@media(max-width: 859.98px) {
+  .member {
+    padding: 22px 10px;
+  }
+
+  .avatar {
+    border-radius: 20px;
+  }
+}
+
+@media(max-width: 589.98px) {
+  .imgCnt {
+    height: 323px;
+  }
+}
+
+@media(max-width: 589.98px) {
+  .imgCnt {
+    display: flex;
+    justify-content: center;
+  }
 }

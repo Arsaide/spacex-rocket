@@ -8,18 +8,19 @@ interface NavItemProps {
     href?: string;
     color: string;
     children: ReactNode;
+    className?: string;
 }
 
-const NavItem: FC<NavItemProps> = ({ to, href, color, children }) => {
+const NavItem: FC<NavItemProps> = ({ to, href, color, children, ...props }) => {
     const linkStyle = { color };
     return (
         <li className={classNames(styles.menuItem, styles.btnAnim)}>
             {to ? (
-                <NavLink to={to} style={linkStyle}>
+                <NavLink to={to} style={linkStyle} {...props}>
                     {children}
                 </NavLink>
             ) : (
-                <a href={href} style={linkStyle}>
+                <a href={href} style={linkStyle} {...props}>
                     {children}
                 </a>
             )}

@@ -1,0 +1,52 @@
+.menu {
+  display: flex;
+  padding: 20px;
+  position: absolute;
+  z-index: 100;
+  top: -48px;
+  left: 0;
+  width: 70%;
+  height: calc(100vh + 48px);
+  background-color: var(--white-opacity-08);
+  transform: translateX(-100%);
+  transition: transform .2s ease-out 0s;
+
+  &.menuOpen {
+    transform: translateX(0);
+  }
+}
+
+.btn {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--white);
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 120px 0 20px 30px;
+}
+
+.logo {
+  padding: 10px 20px !important;
+  border: 1px solid var(--black);
+  border-radius: 100vmax;
+  max-width: max-content;
+  height: max-content;
+  margin-bottom: 15px;
+}
+
+.listItem {
+  width: 100%;
+  color: var(--black);
+  font-size: var(--fz32);
+  line-height: var(--fz32);
+  padding-bottom: 15px;
+  padding-left: 10px;
+
+  border-bottom: 1px solid black;
+}

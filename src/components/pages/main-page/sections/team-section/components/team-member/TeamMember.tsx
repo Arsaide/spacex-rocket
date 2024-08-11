@@ -10,7 +10,9 @@ interface TeamMemberProps {
 const TeamMember: FC<TeamMemberProps> = ({ name, position, avatarUrl }) => {
     return (
         <div className={styles.member}>
-            <img src={avatarUrl} alt={`${name}'s avatar`} className={styles.avatar} />
+            <div className={styles.imgCnt}>
+                <img src={avatarUrl} alt={`${name}'s avatar`} className={styles.avatar} />
+            </div>
             <p>{position}</p>
             <h5>{name}</h5>
         </div>

@@ -68,3 +68,23 @@
     &:active {transform: none;}
   }
 }
+
+@media(max-width: 737.98px) {
+  .text {
+    max-width: 100%;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  .slide {
+    height: 100vh;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}

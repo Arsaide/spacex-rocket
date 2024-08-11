@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import SwiperCore from 'swiper';
 import { SpaceShipModel } from '../../../../../../../api/models/SpaceShipsModels.ts';
@@ -8,7 +8,7 @@ import styles from './RocketSwiper.module.scss';
 import './swiper.css';
 import Arrow from '../../../../../../../lib/icons/Arrow.tsx';
 import { NavLink } from 'react-router-dom';
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 interface RocketSwiperProps {
     rockets: SpaceShipModel[];
@@ -42,7 +42,12 @@ const RocketSwiper: FC<RocketSwiperProps> = ({ rockets }) => {
                     bulletClass: 'custom-bullet',
                     bulletActiveClass: 'custom-bullet-active',
                 }}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, Autoplay]}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
                 onSwiper={handleSwiper}
                 onSlideChange={handleSwiper}
                 breakpoints={{

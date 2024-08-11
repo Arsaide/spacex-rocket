@@ -14,8 +14,46 @@
 }
 
 .img {
+  position: absolute;
   z-index: 1;
   top: -50px;
   right: 100px;
-  position: absolute;
+  width: 50%;
+  max-width: 500px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1119.98px) {
+  .img {
+    width: 60%;
+    right: 5%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900.98px) {
+  .img {
+    max-width: 300px;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .img {
+    width: 40%;
+    top: auto;
+    bottom: -50px;
+    right: -30px;
+  }
 }
