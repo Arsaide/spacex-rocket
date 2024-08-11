@@ -22,16 +22,22 @@ const SignInWithGoogleBtn: FC<SignInWithGoogleBtnProps> = ({ scrollPos }) => {
                 const user = result.user;
 
                 const userRef = doc(db, 'users', user.uid);
-                await setDoc(userRef, {
-                    name: user.displayName,
-                    email: user.email,
-                    picture: user.photoURL,
-                });
+                await setDoc(
+                    userRef,
+                    {
+                        name: user.displayName,
+                        email: user.email,
+                        picture: user.photoURL,
+                        uid: user.uid,
+                    },
+                    { merge: true },
+                );
 
                 login({
                     name: user.displayName || '',
                     email: user.email || '',
                     picture: user.photoURL || '',
+                    uid: user.uid || '',
                 });
             })
             .catch(error => {
