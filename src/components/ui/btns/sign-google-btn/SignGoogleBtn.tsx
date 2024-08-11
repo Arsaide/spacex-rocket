@@ -1,11 +1,12 @@
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth, db } from '../../../../api/middleware/firebase/firebaseConfig.ts';
-import styles from '../Btn.module.scss';
+import styles from './SignGoogleBtn.module.scss';
 import { FC } from 'react';
 import { setTextColorWithScroll } from '../../../../utils/styles-func/setTextColorWithScroll.ts';
 import { linkColor } from '../index.ts';
 import { doc, setDoc } from 'firebase/firestore';
 import { useAuthStore } from '../../../../api/store/AuthStore.ts';
+import GoogleIcon from '../../../../lib/icons/GoogleIcon.tsx';
 
 interface SignInWithGoogleBtnProps {
     scrollPos: number;
@@ -47,7 +48,10 @@ const SignInWithGoogleBtn: FC<SignInWithGoogleBtnProps> = ({ scrollPos }) => {
                 border: `1px solid ${linkColor(scrollPos)}`,
             }}
         >
-            Log in
+            <div className={styles.content}>
+                <GoogleIcon size={15} />
+                Log in
+            </div>
         </button>
     );
 };

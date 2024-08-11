@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Header from './Header.tsx';
 
 export default {
-    title: 'Components/Header',
+    title: 'Components/Header/Main Component',
     component: Header,
 } as Meta<typeof Header>;
 

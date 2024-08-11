@@ -2,7 +2,7 @@ import NavMenu from './NavMenu.tsx';
 import { Meta, StoryObj } from '@storybook/react';
 
 export default {
-    title: 'Components/NavMenu',
+    title: 'Components/Header/Nav menu',
     component: NavMenu,
     args: {
         scrollPos: 0,
@@ -11,4 +11,4 @@ export default {
 
 type Story = StoryObj<typeof NavMenu>;
 
-export const Default: Story = {};
+export const HeaderNavMenu: Story = {};
