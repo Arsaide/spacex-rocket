@@ -36,9 +36,9 @@
 }
 
 .name {
-  font-size: 24px;
+  font-size: var(--fz24);
   font-weight: 700;
-  line-height: calc(28/24 * 100%);
+  line-height: var(--lh24);
   margin: 24px 0;
 }
 
@@ -53,9 +53,9 @@
   border-top: 1px solid var(--white-opacity-01);
   padding: 8px 0;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: var(--fz14);
   font-weight: 400;
-  line-height: calc(17/14 * 100%);
+  line-height: var(--lh14);
 
   &:first-child {
     border-top: 1px solid var(--white-opacity-01);

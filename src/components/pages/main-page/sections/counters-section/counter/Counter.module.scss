@@ -6,14 +6,14 @@
 }
 
 .value {
-  font-size: 64px;
+  font-size: var(--fz64);
   font-weight: 700;
-  line-height: calc(76/64 * 100%);
+  line-height: var(--lh64);
 }
 
 .label {
-  font-size: 32px;
+  font-size: var(--fz32);
   font-weight: 400;
-  line-height: calc(38/32 * 100%);
+  line-height: var(--lh32);
   text-transform: uppercase;
 }

@@ -14,17 +14,17 @@
 }
 
 .title {
-  font-size: 64px;
+  font-size: var(--fz64);
   font-weight: 700;
-  line-height: calc(76/64 * 100%);
+  line-height: var(--lh64);
   margin-bottom: 24px;
   text-transform: uppercase;
 }
 
 .text {
-  font-size: 14px;
+  font-size: var(--fz14);
   font-weight: 400;
-  line-height: calc(24/14 * 100%);
+  line-height: var(--lh14);
 }
 
 .pagination {

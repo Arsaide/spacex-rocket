@@ -9,9 +9,9 @@
 }
 
 .title {
-  font-size: 64px;
+  font-size: var(--fz64);
   font-weight: 700;
-  line-height: calc(76/64 * 100%);
+  line-height: var(--lh64);
   text-transform: uppercase;
   margin-bottom: 24px;
 }
@@ -29,9 +29,9 @@
 }
 
 .name {
-  font-size: 24px;
+  font-size: var(--fz24);
   font-weight: 700;
-  line-height: calc(28/24 * 100%);
+  line-height: var(--lh24);
   text-transform: uppercase;
   margin-bottom: 32px;
 }

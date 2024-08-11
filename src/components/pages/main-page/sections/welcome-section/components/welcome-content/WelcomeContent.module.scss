@@ -5,8 +5,8 @@
 }
 
 .title {
-  font-size: 100px;
-  line-height: 118%;
+  font-size: var(--fz100);
+  line-height: var(--lh100);
   font-weight: 700;
   text-transform: uppercase;
   position: relative;

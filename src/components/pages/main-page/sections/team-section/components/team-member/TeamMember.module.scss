@@ -14,13 +14,13 @@
 
   p {
     color: var(--white-opacity-05);
-    font-size: 12px;
-    line-height: calc(24/12 * 100%);
+    font-size: var(--fz12);
+    line-height: var(--lh12);
   }
 
   h5 {
-    font-size: 14px;
-    line-height: calc(24/14 * 100%);
+    font-size: var(--fz14);
+    line-height: var(--lh14);
   }
 }
 
