@@ -1,9 +1,10 @@
 import NavProfile from './NavProfile.tsx';
 import { Meta, StoryObj } from '@storybook/react';
 import { useAuthStore } from '../../../../../../api/store/AuthStore.ts';
+import img from '../../../../../../../public/storybook.jpg';
 
 export default {
-    title: 'Components/NavProfile',
+    title: 'Components/Header/NavProfile',
     component: NavProfile,
 } as Meta<typeof NavProfile>;
 
@@ -15,7 +16,7 @@ export const Default: Story = {
             user: {
                 name: 'Kirill Testovich',
                 email: 'testkirill@test.com',
-                picture: 'https://test.com',
+                picture: img,
             },
         });
 

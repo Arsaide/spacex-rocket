@@ -3,6 +3,7 @@
   border-radius: 100vmax;
   transition: transform .2s ease-out 0s;
   position: relative;
+  width: max-content;
 
   &:active {
     transform: scale(0.98);

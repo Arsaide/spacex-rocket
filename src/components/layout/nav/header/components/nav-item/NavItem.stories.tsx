@@ -1,25 +1,25 @@
 import NavItem from './NavItem.tsx';
 import { Meta, StoryObj } from '@storybook/react';
+import '../../../../../../global.scss';
 
 export default {
-    title: 'Components/NavItem',
+    title: 'Components/Header/NavItem',
     component: NavItem,
     args: {
-        color: '#000',
+        color: 'rgba(255, 255, 255, 1)',
         children: 'Home',
-        scrollPos: 0,
     },
 } as Meta<typeof NavItem>;
 
 type Story = StoryObj<typeof NavItem>;
 
-export const Default: Story = {
+export const NavLink: Story = {
     args: {
         to: '/',
     },
 };
 
-export const ExternalLink: Story = {
+export const HTMLTag: Story = {
     args: {
         href: '#about',
     },
