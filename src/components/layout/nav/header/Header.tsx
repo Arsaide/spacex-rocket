@@ -1,23 +1,10 @@
 import styles from './Header.module.scss';
-import { useEffect, useState } from 'react';
 import { settingMinMaxValue } from '../../../../utils/styles-func/settingMinMaxValue.ts';
 import NavMenu from './components/nav-menu/NavMenu.tsx';
+import { useScrollPosition } from '../../../../hooks/use-scroll-position/useScrollPosition.ts';
 
 const Header = () => {
-    const [scrollPos, setScrollPos] = useState<number>(0);
-
-    const handleScroll = () => {
-        const position = window.scrollY;
-        setScrollPos(position);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const { scrollPos } = useScrollPosition();
 
     return (
         <header

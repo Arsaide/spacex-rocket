@@ -1,0 +1,20 @@
+.btn {
+  padding: 8px 12px;
+  border-radius: 100vmax;
+
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s ease-out 0s, transform .1s ease-out 0s;
+
+  a {
+    color: var(--white);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
