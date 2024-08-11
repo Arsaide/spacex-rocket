@@ -1,5 +1,5 @@
 .custom-prev, .custom-next {
-    font-size: 24px;
+    font-size: var(--fz24);
     color: var(--white);
     cursor: pointer;
     padding: 10px;

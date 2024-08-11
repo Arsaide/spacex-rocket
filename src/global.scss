@@ -11,13 +11,26 @@
   --white-opacity-02: rgba(255, 255, 255, .1);
   --white-opacity-01: rgba(255, 255, 255, .1);
 
-  --fz-text14: 14px;
-  --fz-text16: 16px;
-  --fz-text18: 18px;
+  --fz12: 12px;
+  --lh12: calc(24/var(--fz12) * 100%);
 
-  --fz-title20: 20px;
-  --fz-title24: 24px;
-  --fz-title28: 28px;
+  --fz14: 14px;
+  --lh14: calc(24/var(--fz14) * 100%);
+
+  --fz16: 16px;
+  --lh16: calc(24/var(--fz16) * 100%);
+
+  --fz24: 24px;
+  --lh24: calc(28/var(--fz24) * 100%);
+
+  --fz32: 32px;
+  --lh32: calc(38/var(--fz32) * 100%);
+
+  --fz64: 64px;
+  --lh64: calc(76/var(--fz64) * 100%);
+
+  --fz100: 100px;
+  --lh100: calc(118/var(--fz100));
 }
 
 *,
@@ -64,9 +77,10 @@ figcaption,
 blockquote,
 dl,
 dd {
-  font-size: 16px;
+  font-size: var(--fz16);
   margin: 0;
   font-weight: 400;
+  line-height: var(--lh16);
 }
 
 body {

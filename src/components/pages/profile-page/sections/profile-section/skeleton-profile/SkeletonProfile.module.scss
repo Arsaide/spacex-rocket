@@ -3,9 +3,9 @@
 }
 
 .title {
-  font-size: 64px;
+  font-size: var(--fz64);
   font-weight: 700;
-  line-height: calc(76/64 * 100%);
+  line-height: var(--lh64);
   text-transform: uppercase;
   margin-bottom: 34px;
 }

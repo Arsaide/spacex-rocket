@@ -14,8 +14,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
-  line-height: calc(24/12 * 100%);
+  font-size: var(--fz12);
+  line-height: var(--lh12);
   cursor: pointer;
   transition: opacity .2s ease-out 0s;
 

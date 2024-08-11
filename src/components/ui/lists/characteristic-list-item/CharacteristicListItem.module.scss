@@ -8,7 +8,7 @@
   border-bottom: 1px solid var(--white-opacity-01);
   padding: 8px 0;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: var(--fz14);
   font-weight: 400;
-  line-height: calc(17/14 * 100%);
+  line-height: var(--lh14);
 }
