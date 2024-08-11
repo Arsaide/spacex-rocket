@@ -35,3 +35,13 @@
   text-transform: uppercase;
   margin-bottom: 32px;
 }
+
+@media(max-width: 1139px) {
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .swiperContainer {
+    max-width: 100%;
+  }
+}

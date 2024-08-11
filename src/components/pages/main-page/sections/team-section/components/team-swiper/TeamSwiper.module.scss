@@ -64,3 +64,25 @@
   flex: 1;
   min-width: 0;
 }
+
+@media(max-width: 859.98px) {
+  .content {
+    max-width: 200px;
+  }
+
+  .btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(max-width: 767.98px) {
+  .team {
+    flex-direction: column;
+  }
+}

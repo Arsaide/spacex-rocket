@@ -19,6 +19,18 @@
     }
 }
 
+@media(max-width: 658.98px) {
+    .RocketSwiper .swiper-slide {
+        height: 295px;
+    }
+}
+
+@media(max-width: 458.98px) {
+    .RocketSwiper .swiper-slide {
+        height: 235px;
+    }
+}
+
 .custom-rocket-pagination {
     display: flex;
     justify-content: center;

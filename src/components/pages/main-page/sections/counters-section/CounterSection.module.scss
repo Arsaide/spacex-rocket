@@ -6,3 +6,15 @@
   display: flex;
   gap: 32px;
 }
+
+@media(max-width: 761px) {
+  .section {
+    margin: 50px 0;
+  }
+
+  .content {
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+  }
+}

@@ -38,10 +38,20 @@ const TeamSwiper = () => {
                 </div>
                 <div className={styles.pagination}>
                     <button ref={prevRef} className={styles.btn} disabled={navState.isBeginning}>
-                        <Arrow direction={'left'} color={ColorsEnum.BLACK} size={50} />
+                        <Arrow
+                            direction={'left'}
+                            color={ColorsEnum.BLACK}
+                            size={50}
+                            className={styles.icon}
+                        />
                     </button>
                     <button ref={nextRef} className={styles.btn} disabled={navState.isEnd}>
-                        <Arrow direction={'right'} color={ColorsEnum.BLACK} size={50} />
+                        <Arrow
+                            direction={'right'}
+                            color={ColorsEnum.BLACK}
+                            size={50}
+                            className={styles.icon}
+                        />
                     </button>
                 </div>
             </div>
@@ -57,6 +67,10 @@ const TeamSwiper = () => {
                     onSwiper={handleSwiper}
                     onSlideChange={handleSwiper}
                     className={'TeamSwiper'}
+                    breakpoints={{
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 2 },
+                    }}
                 >
                     <SwiperSlide>
                         <TeamMember

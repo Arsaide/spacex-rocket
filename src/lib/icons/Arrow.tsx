@@ -1,12 +1,7 @@
 import { FC } from 'react';
+import { IconProps } from '../IconProps.ts';
 
-interface ArrowProps {
-    size?: number;
-    color?: string;
-    direction: 'left' | 'right';
-}
-
-const Arrow: FC<ArrowProps> = ({ size = 24, color = '#fff', direction }) => {
+const Arrow: FC<IconProps> = ({ size = 24, color = '#fff', direction, ...props }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +14,7 @@ const Arrow: FC<ArrowProps> = ({ size = 24, color = '#fff', direction }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
             className="lucide lucide-arrow-left"
+            {...props}
         >
             {direction === 'left' ? (
                 <>
