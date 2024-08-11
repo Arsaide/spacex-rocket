@@ -14,9 +14,11 @@ export const Default: Story = {
     render: () => {
         useAuthStore.setState({
             user: {
+                uid: 'test',
                 name: 'Kirill Testovich',
                 email: 'testkirill@test.com',
                 picture: img,
+                favourites: [],
             },
         });
 

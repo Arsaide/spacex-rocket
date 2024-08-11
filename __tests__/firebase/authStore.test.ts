@@ -16,6 +16,8 @@ describe('Auth store', () => {
             name: 'Kirill Testovich',
             email: 'testkirill@test.com',
             picture: 'https://test.com',
+            uid: 'fsdlfjlkrrwelmsldfsdf',
+            favourites: [],
         };
         useAuthStore.getState().login(user);
 
@@ -29,6 +31,8 @@ describe('Auth store', () => {
             name: 'Kirill Testovich',
             email: 'testkirill@test.com',
             picture: 'https://test.com',
+            uid: 'dsfn432iunvndsfnirh2e20',
+            favourites: [],
         };
         useAuthStore.getState().login(user);
         useAuthStore.getState().logout();

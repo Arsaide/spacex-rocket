@@ -1,0 +1,45 @@
+.section {
+  margin: 210px 0 100px 0;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: calc(76/64 * 100%);
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile {
+  background: var(--white-opacity-05);
+  border-radius: 40px;
+  height: 241px;
+  width: 100%;
+  animation: pulse 1.5s infinite;
+}
+
+.favourites {
+  background: var(--white-opacity-05);
+  border-radius: 40px;
+  height: 200px;
+  max-width: 700px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

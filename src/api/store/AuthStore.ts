@@ -1,14 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { UserModel } from '../models/UserModels.ts';
 
 interface AuthStoreState {
     isAuthenticated: boolean;
-    user: {
-        name: string | null;
-        email: string | null;
-        picture: string | null;
-    } | null;
-    login: (user: { name: string; email: string; picture: string }) => void;
+    user: UserModel | null;
+    login: (user: UserModel) => void;
     logout: () => void;
 }
 

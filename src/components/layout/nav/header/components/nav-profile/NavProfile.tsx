@@ -47,7 +47,7 @@ const NavProfile = () => {
             )}
             {isOpenMenu && (
                 <div className={styles.menu} ref={menuRef}>
-                    <NavLink to={'/profile'} className={styles.link}>
+                    <NavLink to={`/profile?uid=${user?.uid}`} className={styles.link}>
                         Profile
                     </NavLink>
                     <button onClick={logout} className={styles.link}>

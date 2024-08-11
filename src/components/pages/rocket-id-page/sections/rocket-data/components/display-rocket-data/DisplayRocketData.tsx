@@ -5,7 +5,9 @@ import './rocketSwiper.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import SwiperCore from 'swiper';
-import CharacteristicItem from '../characteristic-item/CharacteristicItem.tsx';
+import { useAuthStore } from '../../../../../../../api/store/AuthStore.ts';
+import FavouriteBtn from '../favourite-btn/FavouriteBtn.tsx';
+import CharacteristicListItem from '../../../../../../ui/lists/characteristic-list-item/CharacteristicListItem.tsx';
 SwiperCore.use([Pagination]);
 
 interface DisplayRocketDataProps {
@@ -13,9 +15,12 @@ interface DisplayRocketDataProps {
 }
 
 const DisplayRocketData: FC<DisplayRocketDataProps> = ({ data }) => {
+    const { isAuthenticated } = useAuthStore();
+
     return (
         <div className={styles.card}>
             <h2 className={styles.title}>{data.name}</h2>
+            {isAuthenticated && <FavouriteBtn data={data} />}
             <div className={styles.content}>
                 <div className={styles.swiperContainer}>
                     <Swiper
@@ -45,63 +50,63 @@ const DisplayRocketData: FC<DisplayRocketDataProps> = ({ data }) => {
                 <div className={styles.info}>
                     <h3 className={styles.name}>{data.name}</h3>
                     <ul className={styles.characteristics}>
-                        <CharacteristicItem
-                            label="Height"
+                        <CharacteristicListItem
+                            label="Height:"
                             values={`${data.height.meters} m / ${data.height.feet} ft`}
                         />
-                        <CharacteristicItem
-                            label="Diameter"
+                        <CharacteristicListItem
+                            label="Diameter:"
                             values={`${data.diameter.meters} m / ${data.diameter.feet} ft`}
                         />
-                        <CharacteristicItem
-                            label="Mass"
+                        <CharacteristicListItem
+                            label="Mass:"
                             values={`${data.mass.kg} kg / ${data.mass.lb} lbs`}
                         />
-                        <CharacteristicItem
-                            label="Thrust (First Stage)"
+                        <CharacteristicListItem
+                            label="Thrust (First Stage):"
                             values={`${data.first_stage.thrust_sea_level.kN} kN / ${data.first_stage.thrust_sea_level.lbf} lbf`}
                         />
-                        <CharacteristicItem
-                            label="Thrust (Vacuum, First Stage)"
+                        <CharacteristicListItem
+                            label="Thrust (Vacuum, First Stage):"
                             values={`${data.first_stage.thrust_vacuum.kN} kN / ${data.first_stage.thrust_vacuum.lbf} lbf`}
                         />
-                        <CharacteristicItem
-                            label="Fuel Amount (First Stage)"
+                        <CharacteristicListItem
+                            label="Fuel Amount (First Stage):"
                             values={`${data.first_stage.fuel_amount_tons} tons`}
                         />
-                        <CharacteristicItem
-                            label="Burn Time (First Stage)"
+                        <CharacteristicListItem
+                            label="Burn Time (First Stage):"
                             values={`${data.first_stage.burn_time_sec} sec`}
                         />
-                        <CharacteristicItem
-                            label="Thrust (Second Stage)"
+                        <CharacteristicListItem
+                            label="Thrust (Second Stage):"
                             values={`${data.second_stage.thrust.kN} kN / ${data.second_stage.thrust.lbf} lbf`}
                         />
-                        <CharacteristicItem
-                            label="Fuel Amount (Second Stage)"
+                        <CharacteristicListItem
+                            label="Fuel Amount (Second Stage):"
                             values={`${data.second_stage.fuel_amount_tons} tons`}
                         />
-                        <CharacteristicItem
-                            label="Burn Time (Second Stage)"
+                        <CharacteristicListItem
+                            label="Burn Time (Second Stage):"
                             values={`${data.second_stage.burn_time_sec} sec`}
                         />
-                        <CharacteristicItem
-                            label="Cost per Launch"
+                        <CharacteristicListItem
+                            label="Cost per Launch:"
                             values={`${data.cost_per_launch.toLocaleString()} $`}
                         />
-                        <CharacteristicItem
-                            label="Success Rate"
+                        <CharacteristicListItem
+                            label="Success Rate:"
                             values={`${data.success_rate_pct}%`}
                         />
-                        <CharacteristicItem label="First Flight" values={data.first_flight} />
-                        <CharacteristicItem label="Country" values={data.country} />
-                        <CharacteristicItem label="Company" values={data.company} />
-                        <CharacteristicItem
-                            label="Engines (First Stage)"
+                        <CharacteristicListItem label="First Flight:" values={data.first_flight} />
+                        <CharacteristicListItem label="Country:" values={data.country} />
+                        <CharacteristicListItem label="Company:" values={data.company} />
+                        <CharacteristicListItem
+                            label="Engines (First Stage):"
                             values={data.first_stage.engines}
                         />
-                        <CharacteristicItem
-                            label="Engines (Second Stage)"
+                        <CharacteristicListItem
+                            label="Engines (Second Stage):"
                             values={data.second_stage.engines}
                         />
                     </ul>
