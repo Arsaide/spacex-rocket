@@ -6,12 +6,16 @@ import { setBackgroundRGBColor } from '../../../../../../utils/styles-func/setBa
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import NavItem from '../nav-item/NavItem.tsx';
+import SignInWithGoogleBtn from '../../../../../ui/btns/sign-google-btn/SignGoogleBtn.tsx';
+import { useAuthStore } from '../../../../../../api/store/AuthStore.ts';
+import NavProfile from '../nav-profile/NavProfile.tsx';
 
 interface NavMenuProps {
     scrollPos: number;
 }
 
 const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
+    const { isAuthenticated } = useAuthStore();
     const linkColor = setTextColorWithScroll(scrollPos, 300);
     const padding = `${settingMinMaxValue(scrollPos, 32, 15, 600)}px 0`;
 
@@ -50,18 +54,14 @@ const NavMenu: FC<NavMenuProps> = ({ scrollPos }) => {
                     Contact form
                 </NavItem>
             </ul>
-            <div
-                className={classNames(styles.btn, styles.btnAnim)}
-                style={{ border: `1px solid ${linkColor}` }}
-            >
-                <NavLink
-                    to={'/contact-form'}
-                    style={{
-                        color: setTextColorWithScroll(scrollPos, 300),
-                    }}
-                >
-                    Log In
-                </NavLink>
+            <div className={styles.btns}>
+                {isAuthenticated ? (
+                    <NavProfile />
+                ) : (
+                    <>
+                        <SignInWithGoogleBtn scrollPos={scrollPos} />
+                    </>
+                )}
             </div>
         </nav>
     );

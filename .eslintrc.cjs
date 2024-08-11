@@ -40,6 +40,7 @@ module.exports = {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'react/react-in-jsx-scope': 'off',
     "import/named": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-explicit-any": 'off'
   },
 }

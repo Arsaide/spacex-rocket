@@ -1,0 +1,65 @@
+.profile {
+  padding-left: 12px;
+  border-radius: 100vmax;
+  transition: transform .2s ease-out 0s;
+  position: relative;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: calc(24/12 * 100%);
+  cursor: pointer;
+  transition: opacity .2s ease-out 0s;
+
+  img {
+    width: 37px;
+    height: 37px;
+    border-radius: 100vmax;
+  }
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+.name {
+
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white-opacity-05);
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  border-radius: 5px;
+}
+
+.link {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  color: var(--black);
+  border-bottom: 1px solid var(--white-opacity-05);
+  transition: opacity .2s ease-out 0s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
