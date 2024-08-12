@@ -1,4 +1,6 @@
-# SpaceX Rocket
+<h1 style="text-align: center; font-size: 60px; margin: 0 0 20px 0">SpaceX Rockets App</h1>
+
+<img src="img.png" style="width: 100%; max-height: 500px; height: 100%; border-radius: 15px">
 
 ## Table of Contents
 
