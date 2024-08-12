@@ -51,6 +51,7 @@ The project uses technologies from the test task, but there are also those that 
 - ![React](https://skillicons.dev/icons?i=react) **React**: library for creating SPA
 - ![TypeScript](https://skillicons.dev/icons?i=ts) **TypeScript**: Type-safe JavaScript
 - ![Vite](https://skillicons.dev/icons?i=vite) **Vite**: quick build tool and development server.
+- ![Docker](https://skillicons.dev/icons?i=docker) **Docker**: For deploying a project inside a container.
 - ![Tanstack React Query](https://skillicons.dev/icons?i=react) **Tanstack React Query**: Query and data caching tool
 - ![React](https://skillicons.dev/icons?i=react) **Zustand**: technology for state management.
 - ![React](https://skillicons.dev/icons?i=react) **Axios**: technology that simplifies working with APIs.
